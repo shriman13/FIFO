@@ -1,0 +1,49 @@
+Local validation: Icarus Verilog 11.0, not Vivado.
+No FPGA synthesis or physical-board run was performed here.
+
+CONFIGURATION width=3, depth=4
+PASS 1: reset establishes empty FIFO
+PASS 2: reads while empty are blocked
+PASS 3: fill to capacity (4-word version writes 1,3,5,7)
+PASS 4: writes while full are blocked without overwriting queued words
+PASS 5: drain preserves FIFO order and asserts empty
+PASS 6: simultaneous requests at empty and intermediate occupancy
+PASS 7: simultaneous requests while full accept the read only
+PASS 8: multiple read and write pointer wrap-arounds
+PASS 9: reset with stored data discards the old queue
+PASS 10: reset takes priority over requests
+PASS 11: 1000 deterministic pseudorandom request cycles with scoreboard
+ALL FIFO TESTS PASSED: 11 groups, 1057 checked cycles; width=3 depth=4
+
+CONFIGURATION width=8, depth=16
+PASS 1: reset establishes empty FIFO
+PASS 2: reads while empty are blocked
+PASS 3: fill to capacity (4-word version writes 1,3,5,7)
+PASS 4: writes while full are blocked without overwriting queued words
+PASS 5: drain preserves FIFO order and asserts empty
+PASS 6: simultaneous requests at empty and intermediate occupancy
+PASS 7: simultaneous requests while full accept the read only
+PASS 8: multiple read and write pointer wrap-arounds
+PASS 9: reset with stored data discards the old queue
+PASS 10: reset takes priority over requests
+PASS 11: 1000 deterministic pseudorandom request cycles with scoreboard
+ALL FIFO TESTS PASSED: 11 groups, 1189 checked cycles; width=8 depth=16
+
+CONFIGURATION width=1, depth=2
+PASS 1: reset establishes empty FIFO
+PASS 2: reads while empty are blocked
+PASS 3: fill to capacity (4-word version writes 1,3,5,7)
+PASS 4: writes while full are blocked without overwriting queued words
+PASS 5: drain preserves FIFO order and asserts empty
+PASS 6: simultaneous requests at empty and intermediate occupancy
+PASS 7: simultaneous requests while full accept the read only
+PASS 8: multiple read and write pointer wrap-arounds
+PASS 9: reset with stored data discards the old queue
+PASS 10: reset takes priority over requests
+PASS 11: 1000 deterministic pseudorandom request cycles with scoreboard
+ALL FIFO TESTS PASSED: 11 groups, 1035 checked cycles; width=1 depth=2
+
+TOP-LEVEL CONFIGURATION width=3, depth=4, DEBOUNCE_BITS=3 for simulation
+PASS TOP: short bounce pulses are rejected
+PASS TOP: one operation per accepted button press
+ALL FIFO TOP TESTS PASSED: debounce, held buttons, full/empty blocking, and data order
